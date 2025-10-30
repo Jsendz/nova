@@ -6,46 +6,48 @@ import { fadeUp } from "@/lib/utils";
 export default function Hero() {
   return (
     <section className="relative isolate overflow-hidden">
-      {/* HERO BACKGROUND LAYER */}
-      {/* You can swap this out for a custom texture image later */}
+      {/* FULL-BLEED HERO BACKGROUND */}
       <div
         className="
           absolute inset-0 -z-10
-          bg-linear-to-br from-indigo-500/20 via-fuchsia-500/10 to-transparent
-          dark:from-fuchsia-500/20 dark:via-purple-700/10 dark:to-transparent
+          /* base wash so there are NO light gutters */
+         
         "
       />
 
-      {/* Optional subtle noise / pattern overlay for depth */}
+      {/* colorful directional wash */}
       <div
         className="
           absolute inset-0 -z-10
-          bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.6)_0%,transparent_60%)]
-          opacity-[0.15]
-          dark:bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.3)_0%,transparent_60%)]
-          dark:opacity-[0.2]
+          
         "
       />
 
-      {/* Dark overlay gradient at bottom to fade hero into page bg smoothly */}
+      {/* soft radial glow near top-left */}
+      <div
+        className="
+          absolute inset-0 -z-10
+         
+        "
+      />
+
+      {/* fade to darker at the bottom so hero blends into rest of page */}
       <div
         className="
           pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-64
-          bg-linear-to-b from-transparent to-[rgba(0,0,0,0.6)]
-          dark:to-[rgba(0,0,0,0.8)]
+          
         "
       />
 
       {/* CONTENT WRAPPER */}
       <div className="px-4 sm:px-8 max-w-7xl mx-auto">
         <div className="pt-24 sm:pt-32 pb-16 sm:pb-24 max-w-3xl mx-auto text-center">
-
           {/* Badge */}
           <motion.div
             variants={fadeUp(0)}
             initial="hidden"
             animate="show"
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/40 px-3 py-1 text-[10px] font-medium text-neutral-800 shadow-sm backdrop-blur-md
+            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/40 px-3 py-1 text-[10px] font-medium text-neutral-800 
                        dark:border-white/20 dark:bg-white/10 dark:text-neutral-100"
           >
             <span>⚡ 14-day free trial</span>
@@ -60,7 +62,7 @@ export default function Hero() {
             variants={fadeUp(0.05)}
             initial="hidden"
             animate="show"
-            className="mt-6 text-4xl font-semibold leading-tight tracking-tight text-neutral-900 sm:text-5xl dark:text-white"
+            className="mt-6 text-4xl font-semibold leading-tight tracking-tight  sm:text-5xl dark:!text-white"
           >
             Build smarter.
             <br className="hidden sm:block" />
@@ -72,7 +74,7 @@ export default function Hero() {
             variants={fadeUp(0.1)}
             initial="hidden"
             animate="show"
-            className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-neutral-700 dark:text-neutral-300"
+            className="mx-auto mt-6 max-w-xl text-base leading-relaxed  dark:text-neutral-300"
           >
             NovaAI is your productivity layer. Centralize your work, get instant
             insights, and automate the boring stuff — all in one clean interface.

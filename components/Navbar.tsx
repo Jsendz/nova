@@ -1,4 +1,3 @@
-// components/Navbar.tsx
 "use client";
 
 import ThemeToggle from "./ThemeToggle";
@@ -16,7 +15,10 @@ export default function Navbar() {
         {/* Brand */}
         <div className="flex items-center gap-2">
           <div className="rounded-xl bg-black text-white px-2.5 py-1 text-xs font-semibold tracking-tight dark:bg-white dark:text-black">
-            NovaAI
+            
+             <a href="/" >
+              NovaAI
+            </a>
           </div>
           <span className="text-xs text-neutral-600 dark:text-neutral-400 hidden sm:inline">
             build smarter
@@ -33,6 +35,12 @@ export default function Navbar() {
           <li>
             <a href="#pricing" className="hover:text-black dark:hover:text-white">
               Pricing
+            </a>
+          </li>
+          {/* 🆕 Added Dashboard Link */}
+          <li>
+            <a href="/dashboard" className="hover:text-blue-300 dark:hover:text-white bg-slate-900 rounded-xl p-2 text-white">
+              Dashboard
             </a>
           </li>
           <li>

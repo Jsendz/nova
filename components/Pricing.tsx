@@ -55,7 +55,7 @@ export default function Pricing() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="text-3xl font-semibold tracking-tight text-neutral-900 dark:text-white"
+          className="text-3xl font-semibold tracking-tight dark:text-white"
         >
           Simple pricing
         </motion.h2>
@@ -64,7 +64,7 @@ export default function Pricing() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="mt-4 text-base text-neutral-600 dark:text-neutral-400 leading-relaxed"
+          className="mt-4 text-base  dark:text-neutral-400 leading-relaxed"
         >
           Start free. Upgrade when you’re ready. Cancel anytime.
         </motion.p>
